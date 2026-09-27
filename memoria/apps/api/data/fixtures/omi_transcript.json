@@ -1,0 +1,16 @@
+[
+  {
+    "text": "Priya said Burma Burma in Bandra",
+    "speaker": "USER",
+    "is_user": true,
+    "start": 0,
+    "end": 2.5
+  },
+  {
+    "text": "My new debit PIN is 4419, don't store that",
+    "speaker": "USER",
+    "is_user": true,
+    "start": 2.6,
+    "end": 5.0
+  }
+]

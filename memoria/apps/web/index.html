@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memoria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-row">
+      <div>
+        <h1>Memoria</h1>
+        <p class="subtitle">Voice-first memory with spoken ACLs</p>
+      </div>
+      <div class="header-controls">
+        <label class="principal-label">
+          Principal
+          <select id="principal-select">
+            <option value="self">Me</option>
+            <option value="circle:home">Roommate</option>
+            <option value="circle:work">Work</option>
+          </select>
+        </label>
+        <span id="lyzr-badge" class="badge">Lyzr: …</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="composer surface">
+      <input id="composer" type="text" placeholder="Speak or type an utterance" />
+      <div class="composer-actions">
+        <button id="send-btn" class="btn primary">Send as me</button>
+        <button id="seed-btn" class="btn">Seed demo week</button>
+        <button id="reset-btn" class="btn">Reset demo</button>
+      </div>
+      <p class="hint">Try: work can see that · that's private · forget everything about my health</p>
+      <div class="chips" id="preset-chips"></div>
+    </section>
+
+    <section class="row three-col">
+      <article class="surface card">
+        <h2>Live log</h2>
+        <ul id="live-log" class="log-list"></ul>
+      </article>
+      <article class="surface card">
+        <h2>Open commitments</h2>
+        <ul id="commitments-list" class="stack-list"></ul>
+      </article>
+      <article class="surface card">
+        <h2>Redaction receipts</h2>
+        <ul id="receipts-list" class="stack-list"></ul>
+      </article>
+    </section>
+
+    <section class="row two-col">
+      <article class="surface card">
+        <h2>Memories visible to current principal</h2>
+        <ul id="memories-list" class="stack-list"></ul>
+      </article>
+      <article class="surface card">
+        <h2>Ask</h2>
+        <input id="ask-input" type="text" placeholder="Ask a question" />
+        <button id="ask-btn" class="btn primary">Ask</button>
+        <div id="ask-answer" class="ask-answer"></div>
+      </article>
+    </section>
+
+    <section class="row proof-row">
+      <article class="surface card">
+        <h2>Counts</h2>
+        <div id="counts" class="counts-grid"></div>
+        <div id="forget-proof" class="forget-proof"></div>
+      </article>
+      <article class="surface card">
+        <details id="eval-details">
+          <summary>Gold-set matrix</summary>
+          <p class="caption">The cost function is a leak.</p>
+          <div id="eval-matrix"></div>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
