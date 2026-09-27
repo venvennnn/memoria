@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: memoria
+    runtime: python
+    rootDir: memoria
+    buildCommand: pip install .
+    startCommand: uvicorn apps.api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHONPATH
+        value: .
+      - key: APP_ENV
+        value: production
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: LYZR_API_KEY
+        sync: false
+      - key: LYZR_GATEKEEPER_ID
+        sync: false
+      - key: LYZR_POLICY_ID
+        sync: false
+      - key: LYZR_LIBRARIAN_ID
+        sync: false
+      - key: LYZR_FORGETTER_ID
+        sync: false
+      - key: LYZR_REGISTRAR_ID
+        sync: false
+      - key: LYZR_ANALYST_ID
+        sync: false

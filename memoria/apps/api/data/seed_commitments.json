@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cmt_seed_arjun",
+    "uid": "demo",
+    "text": "Review PR for Arjun",
+    "direction": "i_owe",
+    "who": "arjun",
+    "what": "review PR",
+    "due_at": "2026-09-28T18:00:00+05:30",
+    "status": "open",
+    "tier": "knowledge",
+    "scope": ["self"],
+    "people": ["arjun"],
+    "topics": ["pr", "review"],
+    "memory_id": null,
+    "ts": "2026-09-25T12:41:00+05:30"
+  }
+]
